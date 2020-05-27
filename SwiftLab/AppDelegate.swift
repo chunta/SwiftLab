@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import AIRexLib
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        QGSdk.getSharedInstance().onStart("ww", setDevProfile: true)
         return true
     }
 

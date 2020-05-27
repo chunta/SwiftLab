@@ -13,6 +13,7 @@
 		0556CD3B24766AED002032A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0556CD3924766AED002032A3 /* Main.storyboard */; };
 		0556CD3D24766AEE002032A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0556CD3C24766AEE002032A3 /* Assets.xcassets */; };
 		0556CD4024766AEE002032A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0556CD3E24766AEE002032A3 /* LaunchScreen.storyboard */; };
+		A9F3000628836EB28E1473D7 /* Pods_SwiftLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9155F9AB757BE70D15A35648 /* Pods_SwiftLab.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0556CD3C24766AEE002032A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0556CD3F24766AEE002032A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0556CD4124766AEE002032A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D236F091DD2CEBACC84F82F /* Pods-SwiftLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLab.release.xcconfig"; path = "Target Support Files/Pods-SwiftLab/Pods-SwiftLab.release.xcconfig"; sourceTree = "<group>"; };
+		9155F9AB757BE70D15A35648 /* Pods_SwiftLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B3225E3E5548B95F00FAFC /* Pods-SwiftLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLab.debug.xcconfig"; path = "Target Support Files/Pods-SwiftLab/Pods-SwiftLab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F3000628836EB28E1473D7 /* Pods_SwiftLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0556CD3224766AED002032A3 /* SwiftLab */,
 				0556CD3124766AED002032A3 /* Products */,
+				8BD6954E60C4A058011AE39C /* Pods */,
+				6C1D940CF441BEB151CBDAE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = SwiftLab;
 			sourceTree = "<group>";
 		};
+		6C1D940CF441BEB151CBDAE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9155F9AB757BE70D15A35648 /* Pods_SwiftLab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BD6954E60C4A058011AE39C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0B3225E3E5548B95F00FAFC /* Pods-SwiftLab.debug.xcconfig */,
+				0D236F091DD2CEBACC84F82F /* Pods-SwiftLab.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0556CD4424766AEE002032A3 /* Build configuration list for PBXNativeTarget "SwiftLab" */;
 			buildPhases = (
+				7778BBFC565046A1BAB1CFE5 /* [CP] Check Pods Manifest.lock */,
 				0556CD2C24766AED002032A3 /* Sources */,
 				0556CD2D24766AED002032A3 /* Frameworks */,
 				0556CD2E24766AED002032A3 /* Resources */,
+				C6664A35EC4AAA282A311507 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7778BBFC565046A1BAB1CFE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftLab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6664A35EC4AAA282A311507 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftLab/Pods-SwiftLab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftLab/Pods-SwiftLab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftLab/Pods-SwiftLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0556CD2C24766AED002032A3 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		0556CD4524766AEE002032A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0B3225E3E5548B95F00FAFC /* Pods-SwiftLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		0556CD4624766AEE002032A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D236F091DD2CEBACC84F82F /* Pods-SwiftLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
